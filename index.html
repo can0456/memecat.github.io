@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="class.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- 彩帶的 --><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+       
+</head>
+
+</head>
+
+<body>   
+    <div class="container">
+        <div class="click-effect"></div>
+      </div>
+      
+    <!-- 頂部 -->
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar justify-content-end">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" onclick="playSound()">
+                <img id="navImage" style="height: 60px;" src="img/pop cat close.png" alt="">
+            </a>
+            <audio id="popSound" src="audio/pop-cat.mp3"></audio>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark" aria-current="page" href="#what">認識迷因</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark " href="#look">看看咪因</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            其他
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#mememusic">咪音歌曲</a></li>
+                            <li><a class="dropdown-item" href="#member">咪音教主</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#other">分享迷因</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#look"></a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- logo -->
+    <div class="image-container">
+        <img src="img/logo.gif" class="full-width" alt="Full Width GIF">
+        <img src="img/logo.png" class="overlay-image" alt="Overlay PNG">
+    </div>
+
+
+    <!-- 歷史館 -->
+    <div class="box" id="what">
+        <h1 class="p-5 styled-paragraph " style="letter-spacing: 8px  ;">迷因是啥?能吃嗎?</h1>
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://leanneyanglab.com/wp-content/uploads/2020/12/%E7%A4%BE%E7%BE%A4%E5%AA%92%E9%AB%94.png"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>What's MeMe?</h5>
+                        <p>迷因，又稱網路梗，是一種通過網際網路傳播的文化集合（如一種思想、行為或風格），通常通過社群媒體平台傳播</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://d32kak7w9u5ewj.cloudfront.net/media/image/2022/07/48404366cdb642d29a688dbdd35045d5.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>迷因的型態?</h5>
+                        <p>一個網路迷因存在的形式可以是超連結、影片、圖片、音樂和網站等。它可能只是一個單詞或短語，包括故意將單詞或拼寫錯誤</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i0.wp.com/blog.scs.org.hk/wp-content/uploads/2021/04/Richard-Dawkins.jpg?ssl=1"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>MeMe的由來</h5>
+                        <p>來自1976年科普作家理察·道金斯出版的The Selfish Gene《自私的基因》，書中融合希臘字根mimēma（模仿）和英文字gene的概念，創造出MeMe一字</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+
+
+
+    <!-- 看看迷因 -->
+
+    <div class="box2 " id="look">
+        <div class="container ">
+            <h1 class=" p-5 styled-paragraph"style="letter-spacing: 8px  ;">♕ 咪因名人錄,你知道哪些?</h1>
+
+            <div class=" d-flex justify-content-center  align-items-center">
+
+                <!-- 第一排 -->
+                <div class="text-center ">
+                    <div class="row ">
+                        <!-- huhcat -->
+                        <div class="col">
+                            <div class="card-container" onclick="flipCard(this)">
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="card-content zoom-effect ">
+                                            <img src="img/huh.png" class="img-fluid rounded-start  zoom-image" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-content">
+                                            <h5 class="card-title "><strong>Huh Cat</strong></h5>
+                                            <p class="card-text">原名「Ben Cat」，為一名TikTok用戶的寵物貓，Ben Cat成為「Huh
+                                                Cat」的起因是在2022年底一名使用這隻貓當表情包的網友自行添加了「Huh」的配音，由於充滿困惑的「Huh」和Ben
+                                                Cat的問號表情太過契合，因此加上了配音的版本很快地在社群上竄紅。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 奇怪的知識 -->
+                        <div class="col">
+                            <div class="card-container" onclick="flipCard(this)">
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="card-content zoom-effect">
+                                            <img src="img/wow.png" class="img-fluid rounded-start zoom-image" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-content">
+                                            <h5 class="card-title "><strong>奇怪的知識增加了</strong></h5>
+                                            <p class="card-text">這隻貓名叫
+                                                Mur貓，它的源起是因為，2010年日本出了部《迫真空手部》。裡面有個名叫三浦池沼的小哥總在洗澡時，擺出一副呆滯又神似智障的表情。2013年，日本網友發現了一隻和他表情十分相似的貓，並用PS將圖片拉寬後，就得到了如今的
+                                                Mur 貓。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 尷尬不失禮貌 -->
+                        <div class="col">
+                            <div class="card-container" onclick="flipCard(this)">
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="card-content zoom-effect">
+                                            <img src="img/embrass.png" class="img-fluid rounded-start zoom-image" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-content">
+                                            <h5 class="card-title "><strong>尷尬又不失禮貌地微笑</strong></h5>
+                                            <p class="card-text">
+                                                這隻帶著古怪笑容，嘴巴總是似笑非笑呈「一」字形的貓貓Ollie，這個十分客套、有禮的笑容適用於任何尷尬又很囧的情境，因此成為哏圖上熱門的表情包，甚至紅到被做成公仔與玩偶，但其實那些嘴巴笑成一字「尷尬又不失禮貌的微笑」都是PS做出來的效果。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 第二排 -->
+                    <div class="row">
+                        <!-- popcat -->
+                        <div class="col">
+                            <div class="card-container" onclick="flipCard(this)">
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="card-content  zoom-effect">
+                                            <img src="img/pop.png" class="img-fluid rounded-start zoom-image" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-content">
+                                            <h5 class="card-title "><strong>Pop cat</strong></h5>
+                                            <p class="card-text">
+                                                Popcat源自推特上一段爆紅的貓咪影片，影片中名為「Oatmeal」的貓咪正在對蟲子鳴叫，嘴巴一開一合的。Xavier也把Oatmeal的圖片做成gif圖，後來被他的朋友上傳到Reddit論壇上，突然爆紅，被歐美網友們做成各式各樣的迷因，並搭配上「POP」的音效。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 沙拉貓 -->
+                        <div class="col">
+                            <div class="card-container" onclick="flipCard(this)">
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="card-content zoom-effect">
+                                            <img src="img/vegetable.png" class="img-fluid rounded-start zoom-image" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-content ">
+                                            <h5 class="card-title "><strong>沙拉貓</strong></h5>
+                                            <p class="card-text">
+                                                2018年一隻名為Smudge的貓偷吃盤裡的沙拉後，擺出這副表情。主人將這張照片發佈到Tumblr上，並標上「牠不愛蔬菜」。直到2019年5月有網友將這張照片與2011年美國真人秀《比佛利嬌妻》中某集畫面合併後，就成了「女人吼貓」的梗圖，在網路上被瘋狂轉載。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cursed Cat -->
+                        <div class="col">
+                            <div class="card-container" onclick="flipCard(this)">
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="card-content zoom-effect">
+                                            <img src="img/angry.png " class="img-fluid rounded-start zoom-image" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-content ">
+                                            <h5 class="card-title "><strong>Cursed Cat</strong></h5>
+                                            <p class="card-text">
+                                                被詛咒的貓，指的是一隻黑貓過馬路的圖像，2018 年 11 月，一位未知的使用者發布了該圖像的 Photoshop
+                                                版本。在剪輯中，貓以雙足生物的形式出現，並以滑稽的憤怒姿態出現，2019 年 3 月，經過編輯的照片作為圖像宏在 Reddit 上廣受歡迎。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 第三排 -->
+                    <div class="row">
+                        <!-- 哭哭貓 -->
+                        <div class="col">
+                            <div class="card-container" onclick="flipCard(this)">
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="card-content zoom-effect">
+                                            <img src="img/cry.png" class="img-fluid rounded-start zoom-image" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-content">
+                                            <h5 class="card-title "><strong>哭哭貓</strong></h5>
+                                            <p class="card-text">
+                                                2014年6月10日，一位匿名用戶在網站上傳了一幅新的圖片模板，並將之命名為哭哭貓（crying
+                                                cat）。這隻淚流滿面的貓咪很快引起了人們的關注,他的表情豐富且富有感染力，能夠很好地表達悲傷、失望、難過等情緒，因此被廣泛使用和傳播。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 質問貓 -->
+                        <div class="col">
+                            <div class="card-container" onclick="flipCard(this)">
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="card-content zoom-effect">
+                                            <img src="img/laladi.png " class="img-fluid rounded-start zoom-image" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-content">
+                                            <h5 class="card-title "><strong>質問貓</strong></h5>
+                                            <p class="card-text">
+                                                金色漸層貓咪是「驕傲的大肥兔」的貓「波仔」，常和另一隻貓咪「吟遊詩人咣舅爷」的「咣當」一起出現，起初是咣當先爆紅，後來網友找到了愛碎念的波仔擺在咣當旁邊，沒想到效果超好像是一對吵架情侶，至今也被廣為用來作為吵架對話迷因範本！
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Maxwell the Cat -->
+                        <div class="col">
+                            <div class="card-container" onclick="flipCard(this)">
+                                <div class="card">
+                                    <div class="card-front">
+                                        <div class="card-content zoom-effect">
+                                            <img src="img/maxwall cat.jpg" class="img-fluid rounded-start zoom-image" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-content ">
+                                            <h5 class="card-title "><strong>Maxwell the Cat</strong></h5>
+                                            <p class="card-text">
+                                                這隻貓咪的原名是“jess”,他的主人發布了一張他坐在報紙上的照片,這張照片在社群媒體廣為流傳,甚至被製作成模組並將他取名為Maxwell
+                                                the Cat上傳到GMOD,
+                                                。2022年,有位twitter用戶發布了貓模組在旋轉的GIF,這則貼文在一個月內得到超過34100次轉發,他因此爆紅。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 咪因歌曲 -->
+    <div class="boxsmall" id="mememusic">
+        <h1 class="p-5 styled-paragraph"style="letter-spacing: 8px ;">♪ 咪音唱片行 ♫</h1>
+
+        <div class="box8 d-flex position-relative">
+            <img src="img/meme.png" style="height: 300px; z-index: 1;">
+            <button id="pause-btn" class="btn btn-danger"
+                style="border-radius: 5em; position: absolute; top: 20px; left: 45px; font-size: 2em; z-index: 2;">
+                暫停音樂
+            </button>
+            <div class="box4 container-fluid d-flex justify-content-center">
+                <div class="list ">
+                    <div class="circular-image " id="card01">
+                        <img src="img/chipi.jpg"  alt="...">
+                    </div>
+                    <div class="circular-image" id="card02">
+                        <img src="img/rainbow.png" alt="...">
+                    </div>
+                    <div class="circular-image" id="card03">
+                        <img src="img/go meow.jpeg" alt="...">
+                    </div>
+                    <div class="circular-image" id="card04">
+                        <img src="img/happy cat.jpg" alt="...">
+                    </div>
+                    <div class="circular-image" id="card05">
+                        <img src="img/fat.webp" alt="...">
+                    </div>
+                    <div class="circular-image" id="card06">
+                        <img src="img/babana.jpg" alt="...">
+                    </div>
+                    <!-- 重複一組卡片，實現無縫連接 -->
+                    <div class="circular-image" id="card07">
+                        <img src="img/chipi.jpg" alt="...">
+                    </div>
+                    <div class="circular-image" id="card08">
+                        <img src="img/rainbow.png" alt="...">
+                    </div>
+                    <div class="circular-image" id="card09">
+                        <img src="img/go meow.jpeg" alt="...">
+                    </div>
+                    <div class="circular-image" id="card10">
+                        <img src="img/happy cat.jpg" alt="...">
+                    </div>
+                    <div class="circular-image" id="card11">
+                        <img src="img/fat.webp" alt="...">
+                    </div>
+                    <div class="circular-image" id="card12">
+                        <img src="img/babana.jpg" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 咪因歌曲排行榜 -->
+    <div class="boxsmall ">
+        <div class="container  ">
+            <div class="row">
+                <div class="col-6  ">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">暢銷排行</th>
+                                <th scope="col"> </th>
+                                <th scope="col">歌名</th>
+                                <th scope="col">創作者</th>
+                                <th scope="col">售出量</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row ">1</th>
+                                <td><img src="img/chipi.jpg" width="100px" alt=""></td>
+                                <td>Dubidubidu</td>
+                                <td>Christell</td>
+                                <td>1579000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td><img src="img/happy cat.jpg" width="100px" alt=""></td>
+                                <td>My Happy Song </td>
+                                <td>Noodle & Pals </td>
+                                <td>673200</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td><img src="img/rainbow.png" width="100px" alt=""></td>
+                                <td>Nyan Cat</td>
+                                <td>Daniwell</td>
+                                <td>663000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-6 text-center" onclick="changeImage()">
+                    <img src="img/bananarun.gif" width="450px" height="450px" id="navImage2" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 咪音教成員 -->
+    <div class="box2green d-flex justify-content-center align-items-center">
+
+        <div id="member" class=" container">
+            <h1 class="styled-paragraph "style="letter-spacing: 8px ;">♖ 咪音教主 ♜</h1>
+
+            <h2 class="styled-paragraph2 ">aka製作團隊</h2>
+
+
+            <div class="row row-cols-1 row-cols-md-3 g-4 m-3">
+                <div class="col">
+                    <div class="card h-80">
+                        <img src="img/罐.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title  text-center"><strong>劉冠琳</strong></h5>
+                            <p class="card-text m-3">This is a wider card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-80">
+                        <img src="img/鼠.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title  text-center"><strong>林思嘉</strong></h5>
+                            <p class="card-text m-3">Welcome, meowwwwww meow meow meow meow, meooooow.(歡迎，請加入咪因教，喵)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-80">
+                        <img src="img/罵.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center"><strong>鄭帆堉</strong></h5>
+                            <p class="card-text m-3">This is a wider card with supporting text below as a natural
+                                lead-in to additional content. This card has even longer content than the
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+
+    <!-- 初衷 -->
+    <div class="box2greensmall box2green d-flex justify-content-center">
+        <div class="container row">
+            <div class="col-6 text-center">
+                <h1 class=" styled-paragraph"style="letter-spacing: 8px ;">製作初衷</h1>
+                <p class="text-start p-4">
+                    <light class="text-white"style="letter-spacing: 8px ;">在現在這個網絡十分發達的時代，每個人都一定有在使用各種程式或網站的時後接觸到迷因，但是那些我們看到的迷因都已經被傳過成千上萬次了，已經不再是他們最初的樣子，我們發現，即使這些迷因風靡全世界卻很少有人會去探討這些迷因背後的故事以及他們出現的原因，因此我們決定要為這些迷因找出他最原始的開端，使用網站的形式讓大家能在瀏覽迷因的過程中也認識這些迷因背後的故事。</strong>
+                </p>
+            </div>
+    
+            <div class="col-6 text-center">
+                <div class="row">
+                    <img src="img/donaate.png" alt="">
+                </div>
+                <div class="row">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="我們離不開您的支持，請輸入1~9999的數字" id="message-input">
+                        <span class="input-group-btn">
+                            <button id="show-modal-btn" class="btn btn-primary">傳送</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 感謝斗內 -->
+    <div id="exampleModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><strong>感謝你的支持！</strong></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body position-relative">
+                    <img src="img/donate.png" class="img-fluid" alt="Donate Image">
+                    <div id="message-overlay" class="overlay-text">
+                        <p id="message-text" style="position: absolute; top: 130px; left: 250px; color: rgb(255, 238, 0); font-size: 50px; text-align: center;">$ </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script>
+        document.getElementById('show-modal-btn').addEventListener('click', function() {
+            
+            
+    
+            // 顯示彩帶噴出效果
+            confetti({
+                particleCount: 500,
+                spread: 200,
+                origin: { y: 0.6 }
+            });
+    
+            
+        });
+    </script>
+
+    <!-- 連結到創建迷因 -->
+    <div class="background" id="other">
+        <button type="button" class="btn btn-danger rounded-pill"
+            onclick="window.location.href='https://tools.wingzero.tw/meme/page/1'">分享迷因</button>
+    </div>
+   
+    <!-- 頁尾 -->
+    <footer class="box3 align-content-center">
+        <h5 class="text-center ">
+            <span style="letter-spacing: 8px  ;"> <strong>❤咪音愛我,我愛咪音❤</strong></span>
+            <i class="bi bi-house-door-fill "></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="icon bi bi-house-door-fill" viewBox="0 0 16 16" onclick="scrollToTop()">
+                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+              </svg>
+              
+        </h5>
+    </footer>
+   
+    
+<!-- 回家按鈕 -->
+    <script>
+        function scrollToTop() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      </script>
+      <!-- 特效 -->
+      <script>
+      document.addEventListener('click', function(e) {
+  const ripple = document.createElement('div');
+  ripple.classList.add('ripple');
+  ripple.style.left = e.pageX - 50 + 'px';
+  ripple.style.top = e.pageY - 50 + 'px';
+  document.body.appendChild(ripple);
+  setTimeout(function() {
+    ripple.remove();
+  }, 500);
+});
+    </script>
+     
+    <!-- 原始的 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+
+    <!-- pop貓 -->
+    <script>
+        function playSound() {
+            var popSound = document.getElementById('popSound');
+            popSound.play();
+
+            var navImage = document.getElementById('navImage');
+            navImage.src = 'img/pop cat open.png';
+
+            // Optionally, revert image back after sound ends
+            popSound.addEventListener('ended', function() {
+                navImage.src = 'img/pop cat close.png';
+            });
+        }
+    </script>
+
+    <!-- 翻牌 -->
+    <script>
+        function flipCard(card) {
+            var cardElement = card.querySelector('.card');
+            // 切換卡片的轉場效果
+            if (cardElement.style.transform === 'rotateY(180deg)') {
+                cardElement.style.transform = 'rotateY(0deg)';
+            } else {
+                cardElement.style.transform = 'rotateY(180deg)';
+            }
+        }
+    </script>
+
+    <!-- 香蕉貓 -->
+    <script>
+        var navImage2 = document.getElementById('navImage2');
+
+        navImage2.addEventListener('mousedown', function () {
+            navImage2.src = 'img/banana-crying-cat.gif';
+        });
+
+        navImage2.addEventListener('mouseup', function () {
+            navImage2.src = 'img/bananarun.gif';
+        });
+    </script>
+
+    <!-- 唱片 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var list = document.querySelector('.list');
+            var box = document.querySelector('.box4');
+            var left = 0;
+            var timer;
+
+            function move() {
+                clearInterval(timer);
+                timer = setInterval(() => {
+                    left -= 2;
+                    if (left <= -(list.scrollWidth / 2)) {
+                        left = 0;
+                    }
+                    list.style.left = left + 'px';
+                }, 20);
+            }
+
+            move();
+
+            box.onmouseover = function () {
+                clearInterval(timer);
+            };
+
+            box.onmouseleave = function () {
+                move();
+            };
+        });
+
+    </script>
+
+    <!-- 咪因歌曲音樂 -->
+    <script>
+        // 聲音文件對應
+        const sounds = {
+            card01: 'audio/chibi.mp3',
+            card02: 'audio/rainbow.mp3',
+            card03: 'audio/gomeow.mp3',
+            card04: 'audio/happy.mp3',
+            card05: 'audio/fat.mp3',
+            card06: 'audio/banana.mp3',
+            card07: 'audio/chibi.mp3',
+            card08: 'audio/rainbow.mp3',
+            card09: 'audio/gomeow.mp3',
+            card10: 'audio/happy.mp3',
+            card11: 'audio/fat.mp3',
+            card12: 'audio/banana.mp3'
+        };
+
+        // 當前播放的音樂對象
+        let currentAudio = null;
+
+        document.querySelectorAll('.circular-image').forEach(card => {
+            card.addEventListener('click', function () {
+                const soundSrc = sounds[this.id];
+                if (soundSrc) {
+                    if (currentAudio) {
+                        currentAudio.pause();
+                    }
+                    currentAudio = new Audio(soundSrc);
+                    currentAudio.play();
+                }
+            });
+        });
+
+        // 暫停音樂按鈕
+        document.getElementById('pause-btn').addEventListener('click', function () {
+            if (currentAudio) {
+                currentAudio.pause();
+            }
+        });
+    </script>
+ 
+    <!-- 斗內 -->
+    <script>
+        // 等待整個文檔載入後執行 JavaScript
+        document.addEventListener("DOMContentLoaded", function() {
+            // 獲取傳送按鈕元素
+            var showModalBtn = document.getElementById('show-modal-btn');
+        
+            // 獲取 Modal 元素
+            var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+    
+            // 獲取輸入框和 Modal 文字元素
+            var messageInput = document.getElementById('message-input');
+            var messageText = document.getElementById('message-text');
+    
+            // 為傳送按鈕添加點擊事件監聽器
+            showModalBtn.addEventListener('click', function() {
+                // 確認輸入的內容是否為有效的數字
+                var message = messageInput.value.trim();
+                var messageNumber = parseInt(message);
+    
+                if (!isNaN(messageNumber) && messageNumber >= 1 && messageNumber <= 9999) {
+                    // 更新 Modal 文字內容
+                    messageText.textContent = '$ ' + message;
+                    // 顯示 Modal
+                    modal.show();
+                    // 清空輸入框
+                    messageInput.value = '';
+                } else {
+                    alert('請輸入1到9999之間的數字。');
+                }
+            });
+    
+            // 監聽 Modal 關閉事件，重置 Modal 文字內容
+            modal._element.addEventListener('hidden.bs.modal', function () {
+                messageText.textContent = '$ ';
+            });
+        });
+    </script>
+
+    <!-- 連結到其他網站 -->
+    <script>
+        // You can also add an event listener in JavaScript if needed
+        document.querySelector('.btn-danger').addEventListener('click', function () {
+            <a href="https://tools.wingzero.tw/meme/page/1"></a>
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
