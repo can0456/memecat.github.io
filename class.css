@@ -1,0 +1,407 @@
+/* 頂部 */
+.custom-navbar {
+    background-color: #fffde8;
+}
+
+.box5 {
+    height: 30px;
+    background-color: black;
+}
+
+/* logo */
+img.full-width {
+    width: 100%;
+    height: auto;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+
+}
+
+.full-width {
+    width: 100%;
+    height: auto;
+    /* 確保圖片按比例縮放 */
+}
+
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.card-header-custom {
+    font-size: 80px;
+    /* 調整文字大小為 20 像素 */
+
+}
+
+
+/* 背景 */
+
+.box {
+    background:
+        linear-gradient(to right, rgb(237, 142, 127), rgb(255, 223, 176), rgb(237, 142, 127), rgb(255, 223, 176)),
+        url('https://img.onl/YDQwSv.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    height: 900px;
+}
+
+.boxsmall {
+    background: linear-gradient(to bottom, rgb(157, 190, 107), rgb(157, 190, 107));
+    height: 550px;
+}
+
+
+.table img {
+    width: 180px;
+}
+
+
+.box2 {
+    background: linear-gradient(to bottom, rgb(74, 159, 208), rgb(112, 195, 236));
+    height: 1100px;
+}
+    
+    
+
+
+.box2green {
+    background-color: rgb(88, 198, 187);
+    height: 900px;
+}
+
+.box2greensmall {
+    background-color: rgb(88, 198, 187);
+    height: 500px;
+}
+
+.box4 {
+    background-color: rgb(255, 252, 194);
+    height: 500px;
+}
+
+.box4blue {
+    background-color: rgb(81, 177, 255);
+    height: 500px;
+}
+
+.box32 {
+    background-color: black;
+    height: 500px;
+}
+
+
+/* 頁尾 */
+.box3 {
+    background-color: #fffde8;
+    height: 100px;
+}
+
+
+/* 選轉圓形 */
+.circular-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-left: 20px;
+}
+
+.circular-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.box4 {
+    background-color: antiquewhite;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    width: 100%;
+}
+
+.list {
+    display: flex;
+    width: calc(180px * 12 + 20px * 11);
+    /* 設定為所有元素的總寬度 */
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-180px * 6 - 20px * 6));
+        /* 平移的總寬度的一半 */
+    }
+}
+
+.box8 {
+    height: 300px;
+    width: 100%;
+    /* 確保不會超過容器寬度 */
+    overflow-x: hidden;
+    /* 防止水平滾動 */
+    position: relative;
+}
+
+/* 斗內文字 */
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    /* 使文字位於圖片之上 */
+}
+
+
+
+
+.card-body {
+    padding: 20px;
+    /* 調整內容區塊的內邊距 */
+    font-size: 14px;
+    /* 調整內容字體大小 */
+}
+
+/* 卡片覆蓋 */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-overlay img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 歷史館輪播 */
+.carousel-item img {
+    height: 80vh;
+    /* 視口高度 */
+    object-fit: cover;
+    /* 圖片覆蓋並保持比例 */
+}
+
+/* 大標題跟次標題 */
+.styled-paragraph {
+    font-weight: bold;
+    /* 使文字變粗體 */
+    color: rgb(255, 254, 245);
+    /* 改變文字顏色 */
+    text-align: center;
+    /* 使文字水平置中 */
+    font-size: 60px;
+    /* 使文字變大 */
+    font-family: Arial, Helvetica, sans-serif
+        /* 改變字體 */
+}
+
+.styled-paragraph2 {
+    font-weight: light;
+    /* 使文字變粗體 */
+    color: rgb(255, 254, 245);
+    /* 改變文字顏色 */
+    text-align: center;
+    /* 使文字水平置中 */
+    font-size: 25px;
+    /* 使文字變大 */
+    font-family: Arial, Helvetica, sans-serif
+        /* 改變字體 */
+}
+
+/*寄信框 */
+.custom-input-group {
+    width: 300px;
+    /* 自訂寬度 */
+}
+
+.img-style {
+    width: 100px;
+}
+
+/*翻牌 */
+/* 定義卡片容器的樣式 */
+.card-container {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    /* 定義透視距離 */
+}
+
+/* 定義卡片的樣式 */
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    /* 保留3D效果 */
+    transition: transform 0.8s;
+    /* 定義轉場效果 */
+}
+
+/* 定義正面和背面卡片的樣式 */
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    /* 隱藏背面 */
+}
+
+/* 定義背面卡片 */
+.card-back {
+    transform: rotateY(180deg);
+    /* 初始時反轉180度，使背面顯示 */
+}
+
+/* 設定卡片的內容和樣式 */
+.card-content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    /* 讓標題和內容垂直排列 */
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.background {
+    background-image: url('https://megapx-assets.dcard.tw/images/c6f17522-ce18-4f89-ab41-0e39fc365460/1280.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* 排行榜白底 */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(255, 246, 219);
+    /* 添加白色背景 */
+}
+
+.table th,
+.table td {
+    border: 3px solid #81b35a96;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    color: rgb(104, 142, 88);
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+
+/* 看看迷因文字放大 */
+.zoom-effect {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.zoom-image {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+}
+
+.zoom-effect:hover .zoom-image {
+    transform: scale(1.2);
+}
+
+
+/* 頂部文字放大 */
+.nav-link:hover {
+    transform: scale(1.1); /* 放大 1.1 倍 */
+    transition: transform 0.3s ease; /* 動畫效果 */
+   
+  }
+
+/* 回家 */
+  .icon {
+    float: right;
+    margin-right: 15px; 
+    color: rgb(157, 119, 68); /* 設置圖示顏色 */
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon:hover {
+    color: rgb(239, 166, 88); /* 鼠標懸浮時改變顏色 */
+    transform: scale(1.2); /* 鼠標懸浮時放大圖示 */
+  }
+
+
+  /* 特效 */
+  .ripple {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, transparent 0%, transparent 5%, rgba(255,255,255,0.5) 50%, transparent 85%);
+    animation: ripple-expand 0.5s linear forwards;
+  }
+  
+  @keyframes ripple-expand {
+    to {
+      transform: scale(10);
+      opacity: 0;
+    }
+  }
